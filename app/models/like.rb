@@ -5,7 +5,7 @@ class Like < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
   belongs_to :post
 
-    after_save :update_likes_counter
+  after_save :update_likes_counter
 
   # Define a method to update the likes counter for a post
   def self.update_likes_counter(post)

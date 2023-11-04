@@ -59,6 +59,7 @@ We were using Ruby on Rails to create it.
 
 - **Create Ruby on Rails project**
 - **Project 1: Creating a data model.**
+- **Project 2: Validations and Model specs.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

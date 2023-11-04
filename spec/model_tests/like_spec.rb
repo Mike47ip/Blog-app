@@ -10,7 +10,6 @@ RSpec.describe Like, type: :model do
   end
 
   describe 'Associations' do
-
     it 'should belong to a post' do
       expect(@like.post).to eq(@post)
     end
