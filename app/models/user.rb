@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :author_id
   has_many :likes, foreign_key: :author_id
 
-  after_save :update_posts_counter
+  # after_save :update_posts_counter
 
   # The 3 most recent posts for a user
   def recent_posts

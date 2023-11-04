@@ -2,6 +2,8 @@ class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
   belongs_to :post
 
+  after_save :update_comments_counter
+
   # Define a method to update the comments counter for a post
   def self.update_comments_counter(post)
     comments_count = where(post:).count
