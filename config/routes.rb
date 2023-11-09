@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   get '/user/:id', to: 'user#show'
   get '/user/:author_id/post', to: 'post#index'
   get '/user/:author_id/post/:id', to: 'post#show'
-
 end
