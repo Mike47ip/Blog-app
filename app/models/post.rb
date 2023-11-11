@@ -8,9 +8,7 @@ class Post < ApplicationRecord
   has_many :likes, foreign_key: :post_id
 
   # The 3 most recent comments for a given post
-  def recent_comments
-    comments.order(created_at: :desc).limit(5)
-  end
+  scope :recent_comments, ->(post) { post.comments.order(created_at: :desc).limit(5) }
 
   # Add validations
   validates :title, presence: true, length: { maximum: 250 }
