@@ -20,6 +20,6 @@ class Post < ApplicationRecord
 
   # Updates the posts counter for a user to avoid recursive loop
   def update_user_posts_counter
-    author.update_posts_counter if author
+    author&.update_posts_counter
   end
 end
