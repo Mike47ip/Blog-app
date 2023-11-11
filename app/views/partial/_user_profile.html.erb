@@ -3,7 +3,7 @@
     <% if user.photo.present? && user.photo.match(/.(jpg|jpeg|png|gif)$/i) %>
       <%= image_tag(user.photo, alt: user.name) %>
     <% else %>
-      <%= image_tag('default_user.png', alt: user.name) %>
+      <%= image_tag(user.photo, alt: user.name) %>
     <% end %>
   </div>
   <div class="user_card">
