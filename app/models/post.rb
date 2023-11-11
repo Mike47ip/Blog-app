@@ -7,6 +7,9 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id
   has_many :likes, foreign_key: :post_id
 
+  # before_save :update_posts_counter
+  before_save :update_user_posts_counter
+
   # The 3 most recent comments for a given post
   scope :recent_comments, ->(post) { post.comments.order(created_at: :desc).limit(5) }
 
@@ -14,4 +17,9 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 250 }
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  # Updates the posts counter for a user to avoid recursive loop
+  def update_user_posts_counter
+    author.update_posts_counter if author
+  end
 end

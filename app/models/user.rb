@@ -7,15 +7,12 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :author_id
   has_many :likes, foreign_key: :author_id
 
-  after_save :update_posts_counter
+  def update_posts_counter
+    update(posts_counter: posts.count)
+  end
 
   # The 3 most recent posts for a user
   scope :recent_posts, ->(user) { user.posts.order('created_at desc').limit(3) }
-
-  # Updates the posts counter for a user to avoid recursive loop
-  def update_posts_counter
-    update_columns(posts_counter: posts.count)
-  end
 
 
   validates :name, presence: true
