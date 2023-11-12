@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = 'Comment saved successfully'
-      redirect_to "/user/:id/post/:id"
+      redirect_to '/user/:id/post/:id'
     else
       flash.now[:error] = 'Error: Comment could not be saved'
       render :new
