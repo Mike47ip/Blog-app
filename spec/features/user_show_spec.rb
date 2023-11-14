@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'User', type: :feature do
   before(:each) do
-    # @user1 = User.create(name: 'Lebron', photo: 'https://lebronlinktophoto.jpg', bio: 'Make a diffrence',
-    #                      posts_counter: 0)
     @user2 = User.create(name: 'Pheobe', photo: 'https://pheobelinktophoto.jpg', bio: 'I am a world class developer',
                          posts_counter: 0)
   end
