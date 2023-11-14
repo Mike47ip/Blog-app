@@ -60,6 +60,13 @@ We were using Ruby on Rails to create it.
 - **Create Ruby on Rails project**
 - **Project 1: Creating a data model.**
 - **Project 2: Validations and Model specs.**
+- **Exercise: API documentation.**
+- **Project 3: Processing data in models.**
+- **Project 4: Setup and controllers.**
+- **Project 5: Controllers specs.**
+- **Project 6: Views.**
+- **Project 7: Forms.**
+- **Project 8: Integration specs for Views and fixing n+1 problems.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,17 +141,16 @@ Example command:
 - Twitter: [@ip_mikee](https://twitter.com/ip_mikee)
 - LinkedIn: [Michael Darkwah](https://www.linkedin.com/in/michael-darkwah-81a039141/)
 
+👤 **Fickry Bil Iman**
+
+- GitHub: [@fickryiman](https://github.com/fickryiman)
+- Facebook: [@fickry.bil.iman](https://www.facebook.com/fickry.bil.iman)
+- LinkedIn: [fickry-bil-iman](https://www.linkedin.com/in/fickry-bil-iman)
+
 <!-- FUTURE FEATURES -->
 
 # 🔭 Future Features <a name="future-features"></a>
 
-- **Exercise: API documentation.**
-- **Project 3: Processing data in models.**
-- **Project 4: Setup and controllers.**
-- **Project 5: Controllers specs.**
-- **Project 6: Views.**
-- **Project 7: Forms.**
-- **Project 8: Integration specs for Views and fixing n+1 problems.**
 - **Project 9: Add Devise.**
 - **Project 10: Add authorization rules.**
 - **Project 11: Add API endpoints.**
