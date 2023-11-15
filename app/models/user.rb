@@ -1,4 +1,10 @@
 class User < ApplicationRecord
+  before_validation :set_default
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+        #:Confirmable
   # Associations
   # A user has many posts
   # A user has many comments

@@ -1,5 +1,6 @@
 
 Rails.application.routes.draw do
+  devise_for :users
   get 'likes/create'
   # Defines the root path route ("/")
   # root "user#index"
