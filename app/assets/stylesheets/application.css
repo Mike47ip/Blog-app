@@ -160,5 +160,50 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
+}
+
+
+/* Form-field  */
+.registration-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-info {
+  font-style: italic;
+  color: #888;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+.btn-submit {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #2a58a7;
 }
