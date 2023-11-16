@@ -74,3 +74,6 @@ gem 'devise', '~> 4.9'
 
 # styling devise
 gem 'sassc-rails', '>= 2.1.0'
+
+#add authorization rules
+gem 'cancancan'
