@@ -19,9 +19,6 @@ class PostController < ApplicationController
     @post.likes_counter = 0
 
     if @post.save
-      # Call the method to update the user's posts counter
-      # current_user.update_posts_counter
-
       flash[:success] = 'Post saved successfully'
       redirect_to post_path(@post)
     else
