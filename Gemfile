@@ -69,3 +69,6 @@ group :test do
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
 end
+
+gem 'sassc-rails', '>= 2.1.0'
+
