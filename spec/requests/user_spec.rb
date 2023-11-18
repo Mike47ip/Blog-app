@@ -1,7 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
+RSpec.describe 'User', type: :request do
   describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
+    it 'returns http success for user index' do
+      get '/user'
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template('user/index')
+      expect(response.body).to include 'List of all Users'
+    end
+
+    it 'returns http success for user show' do
+      get '/user/index'
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template('user/show')
+      expect(response.body).to include 'Here is the bio of the User'
+    end
   end
 end

@@ -76,7 +76,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
-    base64 (0.1.1)
+    base64 (0.2.0)
     bigdecimal (3.1.4)
     bindex (0.8.1)
     bootsnap (1.17.0)
@@ -103,7 +103,7 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    drb (2.1.1)
+    drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
     globalid (1.2.1)
@@ -134,7 +134,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
-    mutex_m (0.1.2)
+    mutex_m (0.2.0)
     net-imap (0.4.3)
       date
       net-protocol
@@ -156,7 +156,7 @@ GEM
     public_suffix (5.0.3)
     puma (6.4.0)
       nio4r (~> 2.0)
-    racc (1.7.2)
+    racc (1.7.3)
     rack (3.0.8)
     rack-session (2.0.0)
       rack (>= 3.0.0)
@@ -179,6 +179,10 @@ GEM
       activesupport (= 7.1.1)
       bundler (>= 1.15.0)
       railties (= 7.1.1)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.2.0)
       activesupport (>= 5.0.0)
       minitest
@@ -195,10 +199,10 @@ GEM
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
     rake (13.1.0)
-    rdoc (6.5.0)
+    rdoc (6.6.0)
       psych (>= 4.0.0)
     regexp_parser (2.8.2)
-    reline (0.3.9)
+    reline (0.4.0)
       io-console (~> 0.5)
     rexml (3.2.6)
     rspec-core (3.12.2)
@@ -233,7 +237,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.3.0)
       railties (>= 6.0.0)
-    stringio (3.0.8)
+    stringio (3.0.9)
     thor (1.3.0)
     timeout (0.4.0)
     turbo-rails (1.5.0)
@@ -272,6 +276,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.1)
+  rails-controller-testing
   rspec-rails
   selenium-webdriver
   sprockets-rails
