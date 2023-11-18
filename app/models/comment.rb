@@ -4,9 +4,15 @@ class Comment < ApplicationRecord
 
   after_save :update_comments_counter
 
+  before_save :update_comments_counter
+  after_destroy :reset_comments_counter
+
   # Define a method to update the comments counter for a post
-  def self.update_comments_counter(post)
-    comments_count = where(post:).count
-    post.update(comments_counter: comments_count)
+  def update_comments_counter
+    Post.find_by(id: post_id).increment!(:comments_counter)
+  end
+
+  def reset_comments_counter
+    Post.find_by(id: post_id).decrement!(:comments_counter)
   end
 end
