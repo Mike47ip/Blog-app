@@ -8,8 +8,8 @@ class Like < ApplicationRecord
   after_save :update_likes_counter
 
   # Define a method to update the likes counter for a post
-  def self.update_likes_counter(post)
-    likes_count = where(post:).count
-    post.update(likes_counter: likes_count)
+
+  def update_likes_counter
+    Post.find_by(id: post_id).increment!(:likes_counter)
   end
 end
