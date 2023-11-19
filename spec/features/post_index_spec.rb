@@ -44,7 +44,7 @@ RSpec.describe 'User', type: :feature do
     end
     it 'When I click on a post, it redirects me to that posts show page.' do
       click_link 'post 1 title'
-      expect(page).to have_content 'post 1 title by Lawrence'
+      expect(page).to have_current_path("/user/#{@user1.id}/post/#{@post1.id}")
     end
     it 'I can see a section for pagination if there are more posts than fit on the view.' do
       expect(page).to have_content 'Pagnation'
