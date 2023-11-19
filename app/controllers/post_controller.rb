@@ -1,7 +1,7 @@
 class PostController < ApplicationController
   def index
-    @posts = Post.where(author_id: params[:id])
     @user = User.find(params[:id])
+    @posts = @user.posts.includes(:comments)
   end
 
   def show
@@ -20,7 +20,7 @@ class PostController < ApplicationController
 
     if @post.save
       flash[:success] = 'Post saved successfully'
-      redirect_to post_path
+      redirect_to post_path(@post)
     else
       flash.now[:error] = 'Error: Post could not be saved'
       render :new
