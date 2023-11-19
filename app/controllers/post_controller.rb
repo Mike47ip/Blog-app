@@ -20,7 +20,7 @@ class PostController < ApplicationController
 
     if @post.save
       flash[:success] = 'Post saved successfully'
-      redirect_to post_path
+      redirect_to post_path(@post)
     else
       flash.now[:error] = 'Error: Post could not be saved'
       render :new
